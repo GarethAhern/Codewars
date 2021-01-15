@@ -1,0 +1,27 @@
+import math
+
+def add_binary(a,b):
+    
+    output = ""
+    
+    numerical_value = a + b
+    
+    
+    #This will let me know how many characters is in my output
+    binary_length = int(math.log(numerical_value,2)) + 1
+    
+    
+    binary_digit_position = binary_length
+    
+    #Loop through the length of teh binary and work out if it should be a 1 or a 0
+    while binary_digit_position > 0:
+        if numerical_value >= 2 ** (binary_digit_position - 1):
+            output = output + "1"
+            #If it is a 1 we need to remove this amount from the numerical value
+            numerical_value = numerical_value - 2 ** (binary_digit_position - 1)
+        else:
+            output = output + "0"
+            
+        binary_digit_position = binary_digit_position -1
+        
+    return output
