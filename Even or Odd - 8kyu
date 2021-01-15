@@ -1,0 +1,10 @@
+def even_or_odd(number):
+    
+    output = ""
+    
+    if number % 2 == 1:
+        output = "Odd"
+    else:
+        output = "Even"
+        
+    return output
