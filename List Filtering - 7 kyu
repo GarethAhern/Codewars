@@ -1,0 +1,8 @@
+def filter_list(l):
+    output = []
+    
+    for data in l:
+        if  isinstance(data, int):
+            output.append(data)   
+    
+    return output
